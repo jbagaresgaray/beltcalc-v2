@@ -10,6 +10,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { InfoPage } from '../pages/info/info';
 
 import { localStorage } from '../providers/storage';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -22,7 +23,10 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform,public localData: localStorage) {
+  showFooter:boolean = false;
+
+  constructor(public platform: Platform,public localData: localStorage,private storage:Storage) {
+
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -35,10 +39,10 @@ export class MyApp {
     ];
 
     this.localData.getIsAgree().then((result)=> {
-
+      console.log('result: ',result);
     });
 
-  }
+ }
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -46,6 +50,17 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
+
+      this.showFooter = true;
+      this.storage.set('isResult', 'step');
+      this.storage.set('isMeasure', 'standard');
+
+      /*var settings:number = this.storage.get('isAgree');
+
+      if (settings == 1) {
+          // $state.go('app.tab');
+      }*/
+
     });
   }
 

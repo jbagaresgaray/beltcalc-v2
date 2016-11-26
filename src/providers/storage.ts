@@ -9,6 +9,7 @@ export class localStorage {
   constructor(public storage: Storage) {
   }
 
+
   getIsAgree() {
     return this.storage.get('isAgree');  
   }
