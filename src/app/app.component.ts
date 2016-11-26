@@ -6,7 +6,10 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
-import { ContactPage } from '../pages/contact/contact';
+import { SettingsPage } from '../pages/settings/settings';
+import { InfoPage } from '../pages/info/info';
+
+import { localStorage } from '../providers/storage';
 
 
 @Component({
@@ -19,7 +22,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform,public localData: localStorage) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -27,9 +30,13 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Two Pulleys', component: Page1 },
       { title: 'Three Pulleys',component: Page2 },
-      { title: 'Settings',component: ContactPage },
+      { title: 'Settings',component: SettingsPage },
       { title: 'About',component: AboutPage }
     ];
+
+    this.localData.getIsAgree().then((result)=> {
+
+    });
 
   }
 
