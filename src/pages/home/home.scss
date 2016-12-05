@@ -1,3 +1,43 @@
 page-home {
-
+    .intro-btn {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px !important;
+        background-color: #f3f3f3 !important;
+        border-color: #0a1f38 !important;
+        p {
+            font-size: 18px;
+            line-height: 1.3333333;
+            color: #b24825 !important;
+        }
+    }
+    .blue {
+        background-color: #0d2643;
+        color: #f3f3f3;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            color: #f3f3f3;
+        }
+    }
+    .cream {
+        background-color: #f3f3f3;
+        color: #0d2643;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            color: #0d2643;
+            white-space: normal;
+        }
+    }
+    
+    .orange {
+        color: #b24826 !important;
+    }
 }

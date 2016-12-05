@@ -1,6 +1,11 @@
 <ion-header>
     <ion-navbar>
         <ion-title>V-BeltCalc</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="options"></ion-icon>
+            </button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content padding>
@@ -25,7 +30,7 @@
             <ion-col width-20></ion-col>
             <ion-col width-20></ion-col>
             <ion-col width-20>
-                  <button ion-button color="secondary" class="footer-btn">Secondary</button>
+                <button ion-button color="secondary" class="footer-btn">Secondary</button>
             </ion-col>
             <ion-col width-20></ion-col>
             <ion-col width-20></ion-col>

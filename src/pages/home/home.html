@@ -1,20 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openModal()">
+                <ion-icon name="settings"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="blue">
+    <h4 text-center>Choose the number of pulleys</h4>
+    <div padding text-center>
+        <button ion-button large color="light" class="intro-btn">
+            <img src="assets/images/intro-2.png" width="100%">
+            <!-- <br>
+            <b>TWO PULLEYS</b> -->
+        </button>
+        <button ion-button large color="light" class="intro-btn">
+            <img src="assets/images/intro-3.png" width="100%">
+            <!-- <br>
+            <b>THREE PULLEYS</b> -->
+        </button>
+    </div>
 </ion-content>
