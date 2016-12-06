@@ -22,7 +22,9 @@ import { localStorage } from '../providers/storage';
     InfoPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      backButtonText:''
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [

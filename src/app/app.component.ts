@@ -21,7 +21,7 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   showFooter:boolean = false;
 
@@ -31,11 +31,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Two Pulleys', component: Page1 },
-      { title: 'Three Pulleys',component: Page2 },
-      { title: 'Settings',component: SettingsPage },
-      { title: 'About',component: AboutPage }
+      { title: 'Home', component: HomePage, icon:'home' },
+      { title: 'Two Pulleys', component: Page1, icon:'arrow-forward' },
+      { title: 'Three Pulleys',component: Page2, icon:'arrow-forward' },
+      { title: 'Settings',component: SettingsPage, icon:'settings' },
+      { title: 'About',component: AboutPage, icon:'information-circle' }
     ];
 
     this.localData.getIsAgree().then((result)=> {

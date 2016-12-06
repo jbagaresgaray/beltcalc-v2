@@ -1,11 +1,14 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="royal">
         <button ion-button menuToggle>
             <ion-icon name="menu"></ion-icon>
         </button>
-        <ion-title>Home</ion-title>
+        <ion-title>
+            <img class="title-image" src="assets/images/vbeltcalc-logo.png" style="height:35px;">
+            <!-- <div [innerHTML]="navTitle"></div> -->
+        </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only (click)="openModal()">
+            <button ion-button icon-only (click)="openSettings()">
                 <ion-icon name="settings"></ion-icon>
             </button>
         </ion-buttons>
@@ -16,13 +19,9 @@
     <div padding text-center>
         <button ion-button large color="light" class="intro-btn">
             <img src="assets/images/intro-2.png" width="100%">
-            <!-- <br>
-            <b>TWO PULLEYS</b> -->
         </button>
         <button ion-button large color="light" class="intro-btn">
             <img src="assets/images/intro-3.png" width="100%">
-            <!-- <br>
-            <b>THREE PULLEYS</b> -->
         </button>
     </div>
 </ion-content>
