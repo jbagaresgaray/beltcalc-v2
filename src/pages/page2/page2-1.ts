@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { Page2_1 } from '../page2/page2-1';
+import { Page2_2 } from '../page2/page2-2';
 
 @Component({
-  selector: 'page-page2',
-  templateUrl: 'page2.html'
+  selector: 'page-page2-1',
+  templateUrl: 'page2-1.html'
 })
-export class Page2 {
+export class Page2_1 {
 
   constructor(public navCtrl: NavController) {
     
   }
 
   nextPage(){
-    this.navCtrl.push(Page2_1);
+  	this.navCtrl.push(Page2_2);
   }
 
   prevPage(){
-    this.navCtrl.pop();
+  	this.navCtrl.pop();
   }
 
 }

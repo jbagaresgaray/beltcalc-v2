@@ -7,6 +7,10 @@ import { Page1_2 } from '../pages/page1/page1-2';
 import { Page1_3 } from '../pages/page1/page1-3';
 import { Page1_4 } from '../pages/page1/page1-4';
 import { Page2 } from '../pages/page2/page2';
+import { Page2_1 } from '../pages/page2/page2-1';
+import { Page2_2 } from '../pages/page2/page2-2';
+import { Page2_3 } from '../pages/page2/page2-3';
+import { Page2_4 } from '../pages/page2/page2-4';
 import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
@@ -24,6 +28,10 @@ import { localStorage } from '../providers/storage';
     Page1_3,
     Page1_4,
     Page2,
+    Page2_1,
+    Page2_2,
+    Page2_3,
+    Page2_4,
     AboutPage,
     HomePage,
     SettingsPage,
@@ -43,6 +51,10 @@ import { localStorage } from '../providers/storage';
     Page1_3,
     Page1_4,
     Page2,
+    Page2_1,
+    Page2_2,
+    Page2_3,
+    Page2_4,
     AboutPage,
     HomePage,
     SettingsPage,
