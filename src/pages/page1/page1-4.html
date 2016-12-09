@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar color="royal">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            <img class="title-image" src="assets/images/vbeltcalc-logo.png" style="height:35px;">
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item text-center class="cream">
+        <h2 class="orange">STEP FIVE</h2>
+        <h2 class="orange">(Calculated Size)</h2>
+        <h4 text-wrap>Check the values and adjust if necessary. Calculate to obtain approximate belt length</h4>
+    </ion-item>
+    <ion-item>
+        <img src="assets/images/2p-05.png" />
+    </ion-item>
+    <ion-item-group>
+        <ion-item-divider class="cream" text-center>
+            <small>Distance Between Pulleys</small>
+        </ion-item-divider>
+        <ion-item>
+            <ion-input type="number"></ion-input>
+            <ion-note item-right>
+                in.
+            </ion-note>
+        </ion-item>
+        <ion-item-divider class="cream" text-center>
+            <small>A's Outside Diameter</small>
+        </ion-item-divider>
+        <ion-item>
+            <ion-input type="number"></ion-input>
+            <ion-note item-right>
+                in.
+            </ion-note>
+        </ion-item>
+        <ion-item-divider class="cream" text-center>
+            <small>B's Outside Diameter</small>
+        </ion-item-divider>
+        <ion-item>
+            <ion-input type="number"></ion-input>
+            <ion-note item-right>
+                in.
+            </ion-note>
+        </ion-item>
+        <ion-item-divider class="cream" text-center>
+            <small>Belt Length</small>
+        </ion-item-divider>
+        <ion-item>
+            <ion-input type="number"></ion-input>
+            <ion-note item-right>
+                in.
+            </ion-note>
+        </ion-item>
+    </ion-item-group>
+</ion-content>
+    <ion-footer>
+        <ion-toolbar color="royal">
+            <ion-buttons start>
+                <button ion-button color="orange" class="footer-btn" (click)="prevPage()">
+                    Previous
+                </button>
+            </ion-buttons>
+            <ion-title></ion-title>
+            <ion-buttons end>
+                <button ion-button color="orange" class="footer-btn" (click)="nextPage()">
+                    Re-Calculate
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-footer>

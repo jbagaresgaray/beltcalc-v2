@@ -8,29 +8,29 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content class="cream">
-    <div text-center>
+<ion-content class="no-scroll">
+    <ion-item text-center class="cream">
         <h2 class="orange">STEP ONE</h2>
         <h4>Adjust belt tensioner to center of travel</h4>
-    </div>
+    </ion-item>
     <ion-list>
         <ion-item>
-            <img src="assets/images/2p-01.png"/>
+            <img src="assets/images/2p-01.png" />
         </ion-item>
     </ion-list>
-    <ion-footer>
-        <ion-toolbar color="royal">
-            <ion-buttons start>
-                <button ion-button color="orange" class="footer-btn" (click)="prevPage()">
-                    Previous
-                </button>
-            </ion-buttons>
-            <ion-title></ion-title>
-            <ion-buttons end>
-                <button ion-button color="orange" class="footer-btn" (click)="nextPage()">
-                    Next
-                </button>
-            </ion-buttons>
-        </ion-toolbar>
-    </ion-footer>
 </ion-content>
+<ion-footer>
+    <ion-toolbar color="royal">
+        <ion-buttons start>
+            <button ion-button color="orange" class="footer-btn" (click)="prevPage()">
+                Previous
+            </button>
+        </ion-buttons>
+        <ion-title></ion-title>
+        <ion-buttons end>
+            <button ion-button color="orange" class="footer-btn" (click)="nextPage()">
+                Next
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
