@@ -17,10 +17,10 @@
 <ion-content padding class="blue">
     <h4 text-center>Choose the number of pulleys</h4>
     <div padding text-center>
-        <button ion-button large color="light" class="intro-btn">
+        <button ion-button large color="light" [navPush]="pushPage1" class="intro-btn">
             <img src="assets/images/intro-2.png" width="100%">
         </button>
-        <button ion-button large color="light" class="intro-btn">
+        <button ion-button large color="light" [navPush]="pushPage2" class="intro-btn">
             <img src="assets/images/intro-3.png" width="100%">
         </button>
     </div>
