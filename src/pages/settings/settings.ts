@@ -20,12 +20,10 @@ export class SettingsPage {
     ];
 
     this.storage.get("isResult").then((value) => {
-  	   console.log('Storage isResult: '+ value);
   	   this.toggleModel =  (value == 'step') ? true : false;
    	});
 
    	this.storage.get("isMeasure").then((value) => {
-  	   console.log('Storage isMeasure: '+ value);
   	   this.activeUnit =  value;
    	});
   }  
