@@ -22,27 +22,36 @@
             <small>Distance Between Pulleys</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [ngModel]="pulleyCenter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>A's Outside Diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [ngModel]="largeDiameter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>B's Outside Diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [ngModel]="smallDiameter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
@@ -50,8 +59,11 @@
         </ion-item-divider>
         <ion-item>
             <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
     </ion-item-group>

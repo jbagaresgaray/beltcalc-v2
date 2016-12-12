@@ -14,7 +14,6 @@ export class Page1_1 {
   largeDiameter: number = 0;
   measuringUnits: string;
 
-
   constructor(public navCtrl: NavController,private storage:Storage) {
     
   }
@@ -32,7 +31,6 @@ export class Page1_1 {
 
     this.storage.get('isMeasure').then((value) => {
       this.measuringUnits = value;
-      console.log('this.measuringUnits: ',this.measuringUnits);
     });
   }
 
