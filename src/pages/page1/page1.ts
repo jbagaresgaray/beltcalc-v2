@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { Page1_1 } from '../page1/page1-1';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-page1',
@@ -9,8 +10,24 @@ import { Page1_1 } from '../page1/page1-1';
 })
 export class Page1 {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private storage:Storage) {
     
+  }
+
+  ionViewDidLoad(){
+    console.log('ionViewDidLoad');
+  }
+
+  ionViewDidEnter(){
+    console.log('ionViewDidEnter');
+
+    this.storage.set('smallDiameter',0);
+    this.storage.set('largeDiameter',0);
+    this.storage.set('pulleyCenter',0);
+  }
+
+  ionViewWillEnter(){
+    console.log('ionViewWillEnter');
   }
 
   nextPage(){
