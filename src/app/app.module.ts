@@ -18,6 +18,8 @@ import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { InfoPage } from '../pages/info/info';
+import { CalculationPage1 } from '../pages/calculation/calculation';
+import { CalculationPage2 } from '../pages/calculation/calculation2';
 
 import { Storage } from '@ionic/storage';
 import { localStorage } from '../providers/storage';
@@ -41,7 +43,9 @@ import { localStorage } from '../providers/storage';
     AboutPage,
     HomePage,
     SettingsPage,
-    InfoPage
+    InfoPage,
+    CalculationPage1,
+    CalculationPage2
   ],
   imports: [
     IonicModule.forRoot(MyApp,{
@@ -67,7 +71,9 @@ import { localStorage } from '../providers/storage';
     AboutPage,
     HomePage,
     SettingsPage,
-    InfoPage
+    InfoPage,
+    CalculationPage1,
+    CalculationPage2
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Storage,localStorage]
 })

@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
+import { Storage } from '@ionic/storage';
+
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
@@ -8,7 +10,8 @@ import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { InfoPage } from '../pages/info/info';
-import { Storage } from '@ionic/storage';
+import { CalculationPage1 } from '../pages/calculation/calculation';
+import { CalculationPage2 } from '../pages/calculation/calculation2';
 
 
 @Component({
@@ -71,6 +74,25 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    if(page.title == 'Two Pulleys'){
+      this.storage.get('isResult').then((value) => {
+          if(value == 'result'){
+            this.nav.setRoot(CalculationPage1);
+          }else{
+            this.nav.setRoot(page.component);
+          }
+      });
+    }else if(page.title == 'Three Pulleys'){
+       this.storage.get('isResult').then((value) => {
+          if(value == 'result'){
+            this.nav.setRoot(CalculationPage2);
+          }else{
+            this.nav.setRoot(page.component);
+          }
+      });
+    }else{
+      this.nav.setRoot(page.component);
+    }
   }
+
 }
