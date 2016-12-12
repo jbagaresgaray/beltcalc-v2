@@ -23,9 +23,12 @@
             <small>Distance Between Pulley A and Pulley B</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="pulleyCenter1"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
     </ion-list>

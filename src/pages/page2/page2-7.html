@@ -22,63 +22,84 @@
             <small>Distance Between Pulley A and Pulley B</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="pulleyCenter1"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Distance Between Pulley B and Pulley</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="pulleyCenter2"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Distance Between Pulley C and Pulley A</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="pulleyCenter3"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Pulley A's outside diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="largeDiameter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Pulley B's outside diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="mediumDiameter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Pulley C's outside diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <ion-input type="number" [(ngModel)]="smallDiameter"></ion-input>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
         <ion-item-divider class="cream" text-center>
             <small>Belt Length</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
-            <ion-note item-right>
+            <b class="total-labels" text-center [innerHtml]="beltLength"></b>
+            <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
+            </ion-note>
+            <ion-note item-right *ngIf="measuringUnits == 'metric'">
+                cm.
             </ion-note>
         </ion-item>
     </ion-item-group>
@@ -93,7 +114,7 @@
             </ion-buttons>
         </p>
         <ion-buttons end>
-            <button ion-button color="orange" class="footer-btn" (click)="nextPage()">
+            <button ion-button color="orange" class="footer-btn" (click)="calculateResult()">
                 Re-Calculate
             </button>
         </ion-buttons>
