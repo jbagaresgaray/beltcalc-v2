@@ -13,6 +13,10 @@ export class Page2 {
     
   }
 
+  ionViewDidLoad(){
+    console.log('Page2');
+  }
+
   nextPage(){
     this.navCtrl.push(Page2_1);
   }

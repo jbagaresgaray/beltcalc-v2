@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { Page2_3 } from '../page2/page2-3';
+import { Page2_6 } from '../page2/page2-6';
 
 @Component({
-  selector: 'page-page2-2',
-  templateUrl: 'page2-2.html'
+  selector: 'page-page2-5',
+  templateUrl: 'page2-5.html'
 })
-export class Page2_2 {
+export class Page2_5 {
 
   constructor(public navCtrl: NavController) {
     
   }
 
   ionViewDidLoad(){
-    console.log('Page2-2');
+    console.log('Page2-5');
   }
 
   nextPage(){
-  	this.navCtrl.push(Page2_3);
+  	this.navCtrl.push(Page2_6);
   }
 
   prevPage(){
