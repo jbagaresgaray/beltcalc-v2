@@ -23,7 +23,7 @@
             <small>B's Outside Diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number" [ngModel]="smallDiameter" placeholder="B's Outside Diameter"></ion-input>
+            <ion-input type="number" [(ngModel)]="smallDiameter" placeholder="B's Outside Diameter"></ion-input>
             <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
             </ion-note>

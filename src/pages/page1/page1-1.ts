@@ -10,8 +10,6 @@ import { Storage } from '@ionic/storage';
 export class Page1_1 {
 
   pulleyCenter: number = 0;
-  smallDiameter: number = 0;
-  largeDiameter: number = 0;
   measuringUnits: string;
 
   constructor(public navCtrl: NavController,private storage:Storage) {
@@ -24,6 +22,10 @@ export class Page1_1 {
 
   ionViewDidEnter(){
     console.log('ionViewDidEnter');
+    
+    this.storage.get('pulleyCenter').then((value) => {
+      this.pulleyCenter = value;
+    });
   }
 
   ionViewWillEnter(){
@@ -36,18 +38,11 @@ export class Page1_1 {
 
 
   pulleyCenterChange(value){
-
-  }
-
-  smallDiameterChange(value){
-
-  }
-
-  largeDiameterChange(value){
-
+    this.pulleyCenter = value;
   }
 
   nextPage(){
+    this.storage.set('pulleyCenter',this.pulleyCenter);
   	this.navCtrl.push(Page1_2);
   }
 

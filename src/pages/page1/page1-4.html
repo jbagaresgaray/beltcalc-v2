@@ -22,7 +22,7 @@
             <small>Distance Between Pulleys</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number" [ngModel]="pulleyCenter"></ion-input>
+            <ion-input type="number" [(ngModel)]="pulleyCenter" (change)="pulleyCenterChange(pulleyCenter)"></ion-input>
             <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
             </ion-note>
@@ -34,7 +34,7 @@
             <small>A's Outside Diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number" [ngModel]="largeDiameter"></ion-input>
+            <ion-input type="number" [(ngModel)]="largeDiameter" (change)="largeDiameterChange(largeDiameter)"></ion-input>
             <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
             </ion-note>
@@ -46,7 +46,7 @@
             <small>B's Outside Diameter</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number" [ngModel]="smallDiameter"></ion-input>
+            <ion-input type="number" [(ngModel)]="smallDiameter" (change)="smallDiameterChange(smallDiameter)"></ion-input>
             <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
             </ion-note>
@@ -58,7 +58,7 @@
             <small>Belt Length</small>
         </ion-item-divider>
         <ion-item>
-            <ion-input type="number"></ion-input>
+            <b class="total-labels" text-center [innerHtml]="beltLength"></b>
             <ion-note item-right *ngIf="measuringUnits == 'standard'">
                 in.
             </ion-note>
@@ -78,7 +78,7 @@
             </ion-buttons>
         </p>
         <ion-buttons end>
-            <button ion-button color="orange" class="footer-btn" (click)="nextPage()">
+            <button ion-button color="orange" class="footer-btn" (click)="calculateResult()">
                 Re-Calculate
             </button>
         </ion-buttons>

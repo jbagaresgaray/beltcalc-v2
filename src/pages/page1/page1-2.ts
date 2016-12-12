@@ -10,6 +10,7 @@ import { Storage } from '@ionic/storage';
 })
 export class Page1_2 {
 
+  largeDiameter: number = 0;
   measuringUnits: string;
 
   constructor(public navCtrl: NavController,private storage:Storage) {
@@ -22,6 +23,10 @@ export class Page1_2 {
 
   ionViewDidEnter(){
     console.log('ionViewDidEnter');
+
+    this.storage.get('largeDiameter').then((value) => {
+      this.largeDiameter = value;
+    });
   }
 
   ionViewWillEnter(){
@@ -32,7 +37,12 @@ export class Page1_2 {
     });
   }
 
+  largeDiameterChange(value){
+    this.largeDiameter = value;
+  }
+
   nextPage(){
+    this.storage.set('largeDiameter',this.largeDiameter);
   	this.navCtrl.push(Page1_3);
   }
 
