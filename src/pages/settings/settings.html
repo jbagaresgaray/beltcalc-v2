@@ -8,12 +8,19 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content>
+<ion-content padding class="blue">
+    <h5 text-center padding-top>Choose the default option when computing</h5>
     <ion-list>
-        <ion-list-header>Follow us on Twitter</ion-list-header>
         <ion-item>
-            <ion-icon name="ionic" item-left></ion-icon>
-            @ionicframework
+            <ion-label> Step by Step Calculation</ion-label>
+            <ion-toggle [(ngModel)]="toggleModel" (click)="toggleOption(toggleModel)"></ion-toggle>
+        </ion-item>
+    </ion-list>
+    <h5 text-center padding-top>Choose the default measuring units</h5>
+    <ion-list radio-group [(ngModel)]="activeUnit">
+        <ion-item *ngFor="let item of units">
+            <ion-label>{{item.text}}</ion-label>
+            <ion-radio value="{{item.value}}" checked="item.value == unit" (ionSelect)="serverSideChange2(item.value)"></ion-radio>
         </ion-item>
     </ion-list>
 </ion-content>

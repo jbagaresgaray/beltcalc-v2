@@ -8,8 +8,6 @@ import { AboutPage } from '../pages/about/about';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { InfoPage } from '../pages/info/info';
-
-import { localStorage } from '../providers/storage';
 import { Storage } from '@ionic/storage';
 
 
@@ -25,7 +23,7 @@ export class MyApp {
 
   showFooter:boolean = false;
 
-  constructor(public platform: Platform,public localData: localStorage,private storage:Storage) {
+  constructor(public platform: Platform,private storage:Storage) {
 
     this.initializeApp();
 
@@ -38,22 +36,28 @@ export class MyApp {
       { title: 'About',component: AboutPage, icon:'information-circle' }
     ];
 
-    this.localData.getIsAgree().then((result)=> {
-      console.log('result: ',result);
-    });
-
  }
 
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      this.platform.registerBackButtonAction(function(event){
+         let nav=this.app.getComponent('nav');
+         if (nav.canGoBack()) {nav.pop();}
+         else {this.confirmExitApp(nav);}
+      },101);
+
       StatusBar.styleDefault();
       Splashscreen.hide();
 
       this.showFooter = true;
       this.storage.set('isResult', 'step');
       this.storage.set('isMeasure', 'standard');
+
+      /*this.storage.get("isResult").then((value) => {
+       console.log('Storage isResult: '+ value);
+      });*/
 
       /*var settings:number = this.storage.get('isAgree');
 
