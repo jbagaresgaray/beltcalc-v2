@@ -26,6 +26,7 @@ export class CalculationPage1 {
 
   constructor(public navCtrl: NavController ,private storage:Storage,public params: NavParams) {
     this.recal = params.get("recal");
+    console.log('this.recal: ',this.recal);
     this.showCalculate = (this.recal == true) ? true : false;
   }
 
@@ -88,20 +89,24 @@ export class CalculationPage1 {
     let sumTotal:number = (totalPulleyCenter + totalLargeDiameter + totalSmallDiameter);
     console.log('allTotal: ', sumTotal);
 
-    if (this.measuringUnits == 'standard') {
-        let total:number = Number((sumTotal - 0.125).toFixed(4));
-        total = Number((total).toFixed(3));
+    if (sumTotal > 0){
+      if (this.measuringUnits == 'standard') {
+          let total:number = Number((sumTotal - 0.125).toFixed(4));
+          total = Number((total).toFixed(3));
 
-        console.log('BeltLength 1: ', total);
-        console.log(':======================:');
-        this.beltLength =  total;
-    } else {
-        let total:number = Number((sumTotal - 0.3175).toFixed(4));
-        total = Number((total).toFixed(3));
+          console.log('BeltLength 1: ', total);
+          console.log(':======================:');
+          this.beltLength =  total;
+      } else {
+          let total:number = Number((sumTotal - 0.3175).toFixed(4));
+          total = Number((total).toFixed(3));
 
-        console.log('BeltLength 2: ', total);
-        console.log(':======================:');
-        this.beltLength =  total;
+          console.log('BeltLength 2: ', total);
+          console.log(':======================:');
+          this.beltLength =  total;
+      }
+    }else{
+      this.beltLength =  0;
     }
   }
 

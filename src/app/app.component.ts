@@ -77,7 +77,9 @@ export class MyApp {
     if(page.title == 'Two Pulleys'){
       this.storage.get('isResult').then((value) => {
           if(value == 'result'){
-            this.nav.setRoot(CalculationPage1);
+            this.nav.setRoot(CalculationPage1,{
+              recal:false
+            });
           }else{
             this.nav.setRoot(page.component);
           }
@@ -85,7 +87,9 @@ export class MyApp {
     }else if(page.title == 'Three Pulleys'){
        this.storage.get('isResult').then((value) => {
           if(value == 'result'){
-            this.nav.setRoot(CalculationPage2);
+            this.nav.setRoot(CalculationPage2,{
+              recal:false
+            });
           }else{
             this.nav.setRoot(page.component);
           }
