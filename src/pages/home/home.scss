@@ -5,11 +5,12 @@ page-home {
         margin-bottom: 10px !important;
         background-color: #f3f3f3 !important;
         border-color: #0a1f38 !important;
-        display:block;
         p {
             font-size: 18px;
             line-height: 1.3333333;
             color: #b24825 !important;
+            position: absolute;
+            bottom: 0px;
         }
     }
 }
