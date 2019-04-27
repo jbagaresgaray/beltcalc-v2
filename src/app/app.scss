@@ -13,48 +13,56 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .blue {
-    background-color: #0d2643;
-    color: #f3f3f3;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        color: #f3f3f3;
-    }
+  background-color: #272822;
+  color: #F8F8F0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: #F8F8F0;
+  }
 }
 
 .cream {
-    background-color: #f3f3f3;
+  background-color: #F8F8F0;
+  color: #0d2643;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
     color: #0d2643;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        color: #0d2643;
-        white-space: normal;
-    }
+    white-space: normal;
+  }
 }
 
 .orange {
-    color: #b24826 !important;
+  color: color($colors, orange) !important;
 }
 
 .title-image {
-    margin-top: 8px;
-    height: 35px;
+  margin-top: 8px;
+  height: 35px;
 }
 
 .footer-btn {
-    font-size: 16px !important;
-    line-height: 1.3333333 !important;
-    border-radius: 6px !important;
-    background-color: #b24826 !important;
-    color: #f3f3f3 !important;
-    width: 130px;
-    border-color: #0a1f38;
-    height: 2em;
+  font-size: 16px !important;
+  line-height: 1.3333333 !important;
+  border-radius: 6px !important;
+  background-color: color($colors, orange) !important;
+  color: #F8F8F0 !important;
+  width: 130px;
+  border-color: #0a1f38;
+  height: 2em;
+}
+
+.item-avatar {
+  height: 44px !important;
+  margin-bottom: 12px;
+  border-bottom: 2px solid color($colors, royal);
 }

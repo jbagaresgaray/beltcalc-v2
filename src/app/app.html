@@ -1,13 +1,10 @@
 <ion-menu [content]="content" persistent="true">
-  <ion-header>
-    <ion-toolbar color="royal">
-      <ion-title></ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content class="blue">
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" detail-none>
+    <ion-list no-lines>
+      <ion-item class="item-avatar" color="royal">
+
+      </ion-item>
+      <button color="royal" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" detail-none padding-bottom>
         <ion-icon name="{{p.icon}}" item-left></ion-icon>
         {{p.title}}
       </button>

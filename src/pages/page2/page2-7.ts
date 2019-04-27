@@ -50,7 +50,7 @@ export class Page2_7 {
       this.pulleyCenter2 = value;
     });
 
-    this.storage.get('pulleyCenter2').then((value) => {
+    this.storage.get('pulleyCenter3').then((value) => {
       this.pulleyCenter3 = value;
     });
 
